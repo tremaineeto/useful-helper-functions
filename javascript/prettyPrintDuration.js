@@ -6,9 +6,9 @@ let diffDays = Math.floor(diffMs / 86400000);
 let diffHrs = Math.floor((diffMs % 86400000) / 3600000);
 let diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000);
 
-console.log(this.determineDuration(diffDays, diffHrs, diffMins) + " between " + data.startDate + " and " + data.endDate);
+console.log(this.prettyPrintDuration(diffDays, diffHrs, diffMins) + " between " + data.startDate + " and " + data.endDate);
 
-determineDuration(diffDays, diffHrs, diffMins) {
+prettyPrintDuration(diffDays, diffHrs, diffMins) {
         /* 3!, or 27, possible strings */
         if (diffDays === 0 && diffHrs > 1 && diffMins === 0) {
             return diffHrs.toString() + " hours";
